@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=Oswald:wght@300&display=swap');
+
+body {
+	font-family: 'Noto Sans JP', sans-serif;
+	padding: 0 ;
+	margin: 0;
+    background-color:rgb(247, 247, 247);
+}
+
+nav {
+    padding: 2px 2%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	background-color: rgb(235, 235, 235);
+	position: sticky;
+	top: 0;
+}
+nav .profile {
+	display: flex;
+	align-items: center;
+}
+nav .profile img {
+	width: auto;
+	height: 100px;
+	border-radius: 50%;
+}
+nav .profile h2 {
+	margin-left: 10px;
+	font-size: 18px;
+}
+nav ul {
+	display: flex;
+	list-style-type: none;
+}
+nav ul li {
+	margin-left: 20px;
+	cursor: pointer;
+	border-bottom: 1px solid #fff;
+}
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+nav ul li:hover {
+	border-bottom-color: #000;
+}
+
+.page-content {
+	margin: 4%;
+}
+.page-content header {
+	margin-top: 5%;
+    margin-left: 10%;
+	max-width: 80%;
+}
+.page-content header h1 {
+	margin: 0;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-size: 4vw;
+}
+.page-content header p {
+	color: #505050;
+    text-align: justify;
+}
+.page-content header a {
+	background-color: inherit;
+	border: none;
+	outline: none;
+	padding: 0;
+	font-size: 15px;
+	font-weight: bold;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+	cursor: pointer;
+    text-decoration: none;
+    color: #000;
+}
+.page-content header a:hover {
+	border-bottom-color: #000;
+}
+.page-content .presentation-image {
+	margin-top: 5%;
+    max-width: 80%;
+    margin-left: 10%;
+
+}
+.page-content .presentation p{
+	margin-top: 2%;
+    max-width: 80%;
+    margin-left: 10%;
+    font-size: 1.5vw;
+}
+
+
+.page-content .projects-section {
+	margin-top: 6%;
+}
+.page-content .projects-section h2 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 3vw;
+    margin-left: 5%;
+}
+.page-content .projects-section .projects {
+	display: flex;
+	flex-wrap: wrap;
+    margin-left: 5%;
+}
+.page-content .projects-section .project {
+	margin-right: 20px;
+	max-width: 195px;
+}
+.page-content .projects-section .project h4 {
+	margin: 0;
+}
+.page-content .projects-section .project .description {
+	font-size: 10px;
+}
+.page-content .projects-section .project .goproj a {
+	font-size: 13px;
+	color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+.page-content .projects-section .project .goproj a:hover {
+    border-bottom: 1px solid black;
+}
+
+
+.page-content .competences-section {
+	margin-top: 10vh;
+}
+.page-content .competences-section h2 {
+	font-family: 'Oswald', sans-serif;
+	text-transform: uppercase;
+	font-size: 3vw;
+    margin-left: 5%;
+}
+.competences {
+    padding-top: 5%;
+    padding-left: 40%;
+    min-height: 60vh;
+  }
+  .competences .mySlides {
+    display: none;
+  }
+  .competences .imag {
+    width: 25%;
+  }
+  .competences .prev, .competences .next {
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: #980a0a;
+    font-size: 14px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    margin: 5% 0;
+  }
+  .competences .prev:hover, .competences .next:hover {
+    background-color: rgba(136, 136, 136, 0.8);
+  }
+  .competences .text {
+    font-size: 14px;
+    width: 100%;
+    text-align: justify;
+    margin-left: -32%;
+    margin-top: 5%;
+  }
+  .competences .points {
+    margin-left: 8%;
+    margin-top: 5%;
+  }
+  .competences .dot {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+    margin: 0 2px;
+    background-color: #999999;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-bottom: 5vh;
+  }
+  .competences .active, .competences .dot:hover {
+    background-color: #980a0a;
+  }
+  .competences .fondue {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+
+footer {
+    
+	margin-top: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 10px;
+	background-color: #000;
+	color: white;
+}
+footer .colonne p {
+	font-size: 12px;
+	color: #ccc;
+	cursor: pointer;
+}
+footer .colonne p a {
+	font-size: 12px;
+	color: #ccc;
+	cursor: pointer;
+    text-decoration: none;
+}
+footer .colonne p:hover {
+	color: #fff;
+}
+footer .colonne p a:hover {
+	color: #fff;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 700px) {
+	nav {
+		justify-content: center;
+	}
+	nav ul {
+		display: none;
+	}
+
+	.page-content header {
+		margin-top: 10%;
+		max-width: 100%;
+	}
+	.page-content .projects-section {
+		margin-top: 15%;
+	}
+	.page-content .projects-section h1 {
+		font-size: 1.5em;
+	}
+	.page-content .projects-section .project {
+		margin-right: 0;
+		margin-bottom: 20px;
+		max-width: 100%;
+	}
+	.page-content .projects-section .project .description {
+		font-size: 13px;
+	}
+
+	footer {
+		justify-content: flex-start;
+	}
+	footer .column {
+		width: 80%;
+	}
+}

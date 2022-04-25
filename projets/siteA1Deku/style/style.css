@@ -1,0 +1,610 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Tout les styles généraux */
+#menuBurger, #contenuMenuBurger {
+	display: inline;
+}
+
+
+
+#menuBurgerOverlay {
+	display: none;
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+
+#menuBurgerSidebar-body {
+	padding: 16px 8px;
+}
+
+#menuBurgerSidebar-body li:before {
+	content: ' ';
+	display: inline-block;
+	vertical-align: middle;
+	width: 24px;
+	height: 24px;
+	margin-right: 16px;
+	margin-bottom: 4px;
+}
+
+
+#menuBurgerSidebar-body .bouton {
+	float: none;
+	display: block;
+	text-align: center;
+	margin-top: 16px; 
+	height: auto;
+	padding: 10px;
+	line-height: inherit;
+}
+
+#contenuMenuBurger {
+	display: none;
+}
+
+#boutonMenuBurger, #menuBurgerSidebar, 
+.menuBurgerActive #menuBurgerOverlay {
+	display: block;
+}
+.menuBurgerActive #menuBurgerSidebar {
+	transform: translateX(0);
+}
+
+section:not(.galerie-images, .se002){
+	width:100%;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	flex-direction: column;
+	padding:2vw; 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-size: 1.5vw;
+	background-position: center;
+	
+}
+
+
+.theme{
+	background-color: black;
+	color: lightgreen;
+}
+
+@media only screen and (max-width: 767px) {
+	section:not(.galerie-images, .se002 img){
+		font-size: 3vw;
+		text-align: justify;
+	}
+	.img-area a span{
+		font-size: 2.25vw;
+		margin-top: 150%;
+		text-align: left;
+	}
+}
+ @media only screen and (min-width: 768px) and (max-width: 1050px) {
+	section:not(.galerie-images, .se002 img){
+		font-size: 2.75vw;
+		text-align: justify;
+	}
+	.img-area a span{
+		font-size: 2.25vw;
+		margin-top: 150%;
+		text-align: left;
+	}
+}
+
+/*Style de tout les fichiers include */
+.sefoot{
+	height:15vh;
+	background-color: rgb(09,106,09);
+	color:white;
+}
+
+header{
+	width: 100%;
+	background-color: rgb(09,106,09);
+	position: fixed;
+}
+
+#boutonclaire{
+	display: inline;
+	float: left;
+	background-color: rgb(09,106,09);
+	font-size: 250%;
+	margin-left: 0;
+	padding: 0 0.5%;
+	border: none;
+	cursor: pointer;
+}
+#boutonsombre{
+	display: inline;
+	float: left;
+	background-color: rgb(09,106,09);
+	font-size: 215%;
+	margin-right: 1%;
+	margin-left: 0.1%;
+	padding: 0 1%;
+	border: none;
+	cursor: pointer;
+}
+
+#boutonMenuBurger {
+	cursor: pointer;
+	background: none;
+	border: none;
+	font-size: 30px;
+	padding:0;
+	vertical-align: top;
+	line-height: 47px;
+	float: right;
+	margin-right: 32px; 
+	color:white;
+}
+
+#menuBurgerSidebar {
+	position: fixed;
+	width: 50%;
+	z-index: 40;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #FFF;
+	transform: translateX(-100%);
+	transition: transform 0.2s ease-out;
+}
+
+#menuBurgerSidebar li {
+	display: block;
+}
+
+#menuBurgerSidebar-header {
+	background: url(img/fond-accueil.jpg) center;
+	background-size: cover;
+	height: 25%;
+}
+
+.sefirst {
+	background-image: url(img/fondtitre.png);
+	color: white;
+	height: 65vh;
+}
+
+/* style page Accueil : */
+/* Je donne une forme à mes sections  */
+.se2 {
+	text-align: justify;
+
+}
+.se3 {
+	text-align: justify;
+
+}
+
+.se4 {
+	text-align: justify;
+
+}
+.se5 {
+	background-image: url(img/img00.jpg);
+	height: 55vh;
+}
+.se6 {
+	text-align: justify;
+}
+.se7 {
+	background-image: url(img/imgjistoire.jpg);
+	height: 55vh;
+}
+.se8 {
+	background: black;
+	height: 75vh;
+} 
+/* Créer une frise interactive */
+
+
+.wrapper{
+	position: relative;
+	color: darkorange;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+}
+
+.line-area {
+	display: block;
+	width: 80%;
+	height: 5px;
+	background: darkorange;
+	position: absolute;
+	top: 35%;
+	left: 10%;
+}
+.wrapper .timeline-area {
+	height: 100%;
+}
+.single-item{
+	width: 10%;
+	display: inline-block;
+	position: relative;
+	height: 100%;
+	margin-right: 5%;
+	transition: width .5s;
+	z-index: 10;
+}
+.single-item > span {
+	height: 32px;
+	display: block;
+	font-weight: bold;
+	position: absolute;
+	top: 50%;
+	margin-top: -8px;
+	width: 100%;
+	cursor: pointer;
+}
+.single-item > span:before {
+	content: '';
+	display: block;
+	width: 8px;
+	height: 8px;
+	background: darkorange;
+	font-size: 0.75vw;
+	margin: -8% auto 8px;
+	border-radius: 50%;
+	padding: 11%;
+}
+.img-area{
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin-top: -50%;
+	width: 100%;
+}
+.img-area a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.img-area a img {
+	border-radius: 50%;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	max-height: 100%;
+	max-width: 100%;
+	border: 5px solid #888888;
+}
+.img-area a span{
+	position: absolute;
+	width: 250%;
+	margin-left: -72%;
+	font-size: 1.10vw;
+	left: 0;
+	text-transform: uppercase;
+	text-decoration: none;
+	white-space: nowrap;
+	color: lightgreen;
+	font-weight: bold;
+	background: black;
+}
+.img-area a span:after{
+	margin-left: 5px;
+}
+.single-item.active{
+	width: 10%;
+}
+.single-item.active .img-area{
+	display: block;
+}
+
+/* style page histoire : */
+/* Je donne une forme à mes sections  */
+.seh2 {
+	text-align: justify;
+}
+.seh3 {
+	text-align: justify;
+}
+.seh4{
+	background-image: url(img/imgburger.jpg);
+	height: 65vh;
+}
+.seh5{
+	display:block;
+	text-align: justify; 
+	overflow: auto;
+	font-size: 1.25vw;
+}
+.amis1{
+	float: left;
+	width:60%;
+}
+.amis2{ 
+	overflow: auto;
+}
+.seh6{
+	text-align: justify; 
+	font-size: 1.25vw;
+}
+
+/* style page galeries : */
+/* Je stylise mes boutons  */
+#boutontri {
+    text-align: center;
+    margin-top: 1%;
+    padding: 4%;
+}
+#bouton1, #bouton2, #bouton3, #bouton4, #bouton5 , #bouton6{
+    padding: 2%;
+    margin-left: 1%;
+    margin-right: 1%;
+    background-color: navy;
+    color: white;
+    border-radius: 25%;
+}
+/* Mise en page de mes images */
+img[title] {
+	width :20%;
+	height :auto;
+	border :1px solid navy;
+	float: left;
+	margin : 10px 10px;
+	cursor: pointer;
+    display: block;
+    white-space: inherit;
+    background-repeat : no-repeat;
+    align-items: center;
+}
+.clear {
+	clear: both;
+}
+
+/* Style de la lightbox */
+
+#lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    z-index: 10;
+    display: none;
+}
+
+/* Style des boutons : */
+#lightbox button {
+    z-index: 11;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    height: 100px;
+    color: green;
+    width: 100px;
+    position: fixed;
+}
+
+/* .lightbox_prev{
+    top: 50%;
+    left: 0;
+}
+.lightbox_next{
+    top: 50%;
+    right: 0;
+} */
+.lightbox_close{
+    top: 0;
+    right: 0;
+}
+/* Animations boutons : */
+#lightbox button:hover {
+    opacity: 1;
+}
+/* Style du contenue de la lightbox */
+#lightbox_contain{
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    
+}
+#lightbox_contain img{
+    min-width: 40%;
+    max-width: 75%;
+    height: auto;
+    animation: lightboximage 0.5s;
+
+    
+}
+/* On creer une animation dans la lightbox */
+@keyframes lightboximage {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+/* style page contact : */
+/* Je donne une forme à mes sections  */
+.sec2 {
+    background-image: url(img/contact.jpg);
+    font-size: 2.5vw;
+}
+.sec3{
+    background-image: url(img/contact.gif);
+    height: 80vh;
+    
+}
+/* Je donne un style a mon formulaire de contact */
+.contact{
+	margin: 0 auto;
+	width: 70%;
+	padding: 1em;
+	border: 1px solid black;
+	border-radius: 1em;
+	background-color: darkorange;
+}
+.contact div + div{
+    margin-top: 1em;
+}
+.contact label{
+    display: inline-block;
+    text-align: right;
+
+}
+.contact input, textarea{
+    font: 0.8em sans-serif;
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.contact input:focus,textarea:focus {
+    border-color: #000;
+}
+.contact textarea {
+    vertical-align: top;
+    height: 5em;
+}
+.buttonCtc {
+    padding-left: 90px;
+}
+.buttonCtc input{
+    margin-left: .5em;
+    padding: 2%;
+}
+
+
+.prevention{
+    background-color: rgba(102, 26, 26,0.6);
+    font-size: 5em;
+}
+
+
+/* style page contact : */
+/* Je donne une forme à mes sections  */
+
+.se002 {
+    text-align: justify;
+    display : flex;
+    justify-content: space-between;
+    width:100%;
+	box-sizing: border-box; 
+	padding:2vw; 
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	font-size: 1.5vw;
+	background-position: center;
+    flex-direction: row;
+}
+
+/* Je donne un style au contenue de  mes div : */
+.imgarticle{
+    float: left;
+    left: 5%;
+    width: 45%;
+    height: auto;
+}
+.imgarticle img{
+    width: 100%;
+}
+
+.txtarticle{
+    float:right;
+    right: 5%;
+    max-width: 45%;
+    height: auto;
+}
+
+/* Je donne un style aux boutons : */
+#contenuePlus00{
+
+    left:0;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    color: black;
+    width: 100%;
+    background-color:white;
+    margin-bottom: 1%;
+}
+
+
+#contenuePlus01{
+
+    left:0;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    color: black;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 1%;
+}
+
+
+#contenuePlus02{
+
+    left:0;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.4s;
+    color: black;
+    background-color: white;
+    width: 100%;
+    margin-bottom: 1%;
+
+}
+/* Je donne un style a mon formulaire de commentaires : */
+.commentForm{
+    border: 2px solid black;
+    padding: 2%;
+    background-color: green;
+    border-radius: 2%;
+    width : auto;
+
+}
+.pse{
+    margin-right: 100%;
+    padding : 0 2% 2% 0;
+}
+.msg{
+    margin-top: 5%;
+    padding : 0 10% 10% 0;
+}
+.poster{
+    padding: 2%;
+    margin-left: 5%;
+}
+.retourcmt1{
+	overflow-y: scroll;
+	width: 100%;
+	overflow-x: scroll;
+	max-height: 400px;
+}
+.retourcmt2{
+	overflow-y: scroll;
+	width: 100%;
+	overflow-x: scroll;
+	max-height: 400px;
+}
+.retourcmt3{
+	overflow-y: scroll;
+	width: 100%;
+	overflow-x: scroll;
+	max-height: 400px;
+}
